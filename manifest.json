@@ -1,6 +1,6 @@
 {
   "name": "__MSG_extName__",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "manifest_version":2,
   "description": "__MSG_extDescription__",
   "icons": {
@@ -28,7 +28,8 @@
   "homepage_url": "https://www.36notes.com",
   "options_ui": {
     "page": "options.html",
-    "chrome_style": true
+    "chrome_style": true,
+    "open_in_tab": true
   },
   "omnibox": {
     "keyword": "__MSG_keyword__"
