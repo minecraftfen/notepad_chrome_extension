@@ -1,0 +1,22 @@
+{
+   "extName": {
+      "message": "36note",
+      "description": "Extension name"
+   },
+   "extDescription": {
+      "message": "Extension for 35note notebook",
+      "description": "extension description"
+   },
+   "keyword": {
+      "message": "35note",
+      "description": "extension keyword"
+   },
+   "Title_popup": {
+      "message": "35note mainview",
+      "description": "Tab title of popup.html"
+   },
+   "Alert_popup_windowd": {
+      "message": "The editor in non-pop-up mode has not been debugged",
+      "description": "Alert of popup.html when it doesn't in popup mode"
+   }
+}

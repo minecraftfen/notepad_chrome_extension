@@ -1,0 +1,22 @@
+{
+   "extName": {
+      "message": "36随记",
+      "description": "扩展名"
+   },
+   "extDescription": {
+      "message": "35记笔记本专用插件",
+      "description": "扩展描述"
+   },
+   "keyword": {
+      "message": "35记",
+      "description": "扩展关键词"
+   },
+   "Title_popup": {
+      "message": "35记 主界面",
+      "description": "popup.html 标签页标题"
+   },
+   "Alert_popup_windowd":{
+      "message": "非弹窗模式下的编辑器未调试完成,\n请斟酌使用",
+      "description": "popup.html 非弹窗模式警告"
+   }
+}

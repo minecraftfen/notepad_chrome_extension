@@ -1,0 +1,38 @@
+{
+  "name": "__MSG_extName__",
+  "version": "0.0.1",
+  "manifest_version":2,
+  "description": "__MSG_extDescription__",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "img/icon128.png",
+    "default_title": "36记",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "contextMenus", 
+    "tabs", 
+    "webRequest", 
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "js/inject.js"
+  ],
+  "homepage_url": "https://www.36notes.com",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "omnibox": {
+    "keyword": "__MSG_keyword__"
+  },
+  "default_locale": "zh_CN",
+  "devtools_page": "devtools.html"
+}
