@@ -1,0 +1,31 @@
+{
+  "name": "notepad_chrome_extension",
+  "version": "0.1.1",
+  "description": "Extension for 35note notebook",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/minecraftfen/notepad_chrome_extension.git"
+  },
+  "keywords": [
+    "36note",
+    "notepad"
+  ],
+  "author": {
+    "name":"Ivor Ling",
+    "email":"ivorling041@gamil.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minecraftfen/notepad_chrome_extension/issues"
+  },
+  "homepage": "https://www.36notes.com",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/minecraftfen"
+  },
+  "files":[
+    "../notepad_chrome_extension.crx"
+  ]
+}

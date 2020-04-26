@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title></title>
-    <script type="module"src="example.js"></script>
+    <script type="module" src="example.js"></script>
+    <link rel='stylesheet' type='text/css' href='global.css' />
     <style>
-      :root{--pos:2.25;--Theme_color:#0E74BB}
+      :root{--pos:2.25;}
       #canvas{
         --fill:var(--Theme_color);
         --rx:0.61rad;--ry:45deg;--rz:0;
@@ -93,7 +94,7 @@
       .windowed{width: 25px;height: 25px;position: absolute;right:10px;bottom:10px;overflow: visible;}
       .windowed polygon{background-color:var(--Theme_color);transition:transform cubic-bezier(0.5, -1.5, 0.5, 2.5) 0.25s;}
       .windowed:hover polygon{transform:translate(100px,-100px);}
-      #canvas.active{border-radius:10px;width:500px;height:500px;animation:none;}
+      #canvas.active{border-radius:5px;width:500px;height:500px;animation:none;}
       #canvas.active.extended{
         height: 98vh;
         width: calc(98vh / 210 * 148);
@@ -105,7 +106,7 @@
     </style>
   </head>
   <body>
-    <canvas class="block" id="canvas"></canvas>
+    <canvas class="block" id="canvas" width="1480" height="2100"></canvas>
     <div>
     <div class="block" id="cubey"></div>
     <div class="block" id="cubez"></div>

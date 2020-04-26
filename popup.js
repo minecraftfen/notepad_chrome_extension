@@ -8,7 +8,7 @@ function canvastoggle(e = null,state = null,extended = false){
   else if(state) obj.classList.add("active");
   else obj.classList.remove("active");
   if(extended){
-    obj.classList.add(extended);
+    obj.classList.add("extended");
   }else{
     obj.classList.remove("extended");
   }

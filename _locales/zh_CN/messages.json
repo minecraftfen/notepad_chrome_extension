@@ -18,5 +18,33 @@
    "Alert_popup_windowd":{
       "message": "非弹窗模式下的编辑器未调试完成,\n请斟酌使用",
       "description": "popup.html 非弹窗模式警告"
+   },
+   "Title_bluetoothelp": {
+      "message": "35记 蓝牙连接界面",
+      "description": "bluetoothelp.html 标签页标题"
+   },
+   "bluetoothhelp_line1":{
+      "message": "只有Chrome和Opera提供蓝牙支持",
+      "description": "bluetoothelp.html 第一行信息"
+   },
+   "bluetoothhelp_line2_prefix":{
+      "message": "你的浏览器可能是 ",
+      "description": "bluetoothelp.html 第二行信息前半部分"
+   },
+   "bluetoothhelp_line2_suffix": {
+      "message": "",
+      "description": "bluetoothelp.html 第二行信息后半部分"
+   },
+   "bluetoothhelp_line3": {
+      "message": "如果浏览器支持蓝牙,你将会看到一个蓝牙配对菜单",
+      "description": "bluetoothelp.html 第三行信息"
+   },
+   "browser_name_prefix": {
+      "message": "",
+      "description": "浏览器名前缀"
+   },
+   "browser_name_suffix": {
+      "message": "浏览器",
+      "description": "浏览器名后缀"
    }
 }
