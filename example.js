@@ -4,8 +4,12 @@ import {NotepadMode} from "./src/models.js";
 const notepadConnector = new NotepadConnector();
 
 window.requestDevice = async function () {
-    window.notepad = await notepadConnector.requestDevice();
-    console.log("requestDevice", window.notepad);
+    try{
+        window.notepad = await notepadConnector.requestDevice();
+        console.log("requestDevice", window.notepad);
+    }catch{
+        
+    }
 };
 
 window.connect = function (device) {
@@ -35,33 +39,29 @@ window.setMode = function () {
 };
 
 const getCanvas = function () {
-    if (!window.canvas) {
-        window.canvas = document.getElementById("canvas");
-    }
+    window.canvas = document.getElementById("canvas");
     return window.canvas;
 };
 
-const getScaleRatio = function () {
-    if (!window.scaleRatio) {
-        let rect = getCanvas().getBoundingClientRect();
-        window.scaleRatio = Math.min(rect.width / 14800.0, rect.height / 21000.0);
-    }
-    return window.scaleRatio;
-};
-
 window.handleSyncPointer = function (pointers) {
-    let context = getCanvas().getContext("2d");
-    let scaleRatio = getScaleRatio();
+    let canvas = getCanvas()
+    let context = canvas.getContext("2d");
+    if (canvas.width != 1480) canvas.width = 1480;
+    if (canvas.height != 2100) canvas.height = 2100;
     for (let p of pointers) {
-        let pre = window.prePointer ? window.prePointer.p : 0;
-        if (pre <= 0 && p.p > 0) {
-            context.beginPath();
-            context.moveTo(p.x * scaleRatio, p.y * scaleRatio);
-        } else if (pre > 0 && p.p > 0) {
-            context.lineTo(p.x * scaleRatio, p.y * scaleRatio);
-        } else if (pre > 0 && p.p <= 0) {
-            context.stroke();
-        }
+        let pre = window.prePointer ? window.prePointer : {x:0,y:0,t:0,p:0};
+        context.beginPath();
+        if (pre.p > 0) context.moveTo(pre.x / 10, pre.y / 10);
+        else context.moveTo(p.x / 10, p.y / 10);
+        context.lineWidth = p.p/128;
+        context.lineTo(p.x/10, p.y/10);
+        context.stroke();
         window.prePointer = p;
     }
 };
+export const bluetooth = {
+    requestDevice: window.requestDevice,
+    connect: window.connect,
+    disconnect: window.disconnect,
+    setMode: window.setMode
+}

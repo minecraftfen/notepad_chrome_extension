@@ -34,6 +34,6 @@
   "omnibox": {
     "keyword": "__MSG_keyword__"
   },
-  "default_locale": "zh_CN",
+  "default_locale": "en",
   "devtools_page": "devtools.html"
 }

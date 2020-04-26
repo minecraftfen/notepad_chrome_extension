@@ -12,11 +12,39 @@
       "description": "extension keyword"
    },
    "Title_popup": {
-      "message": "35note mainview",
+      "message": "35note mainpage",
       "description": "Tab title of popup.html"
    },
    "Alert_popup_windowd": {
       "message": "The editor in non-pop-up mode has not been debugged",
       "description": "Alert of popup.html when it doesn't in popup mode"
+   },
+   "Title_bluetoothelp": {
+      "message": "35note Bluetooth connection page",
+      "description": "Tab title of bluetoothelp.html"
+   },
+   "bluetoothhelp_line1": {
+      "message": "only Chrome and Opera provide Bluetooth support",
+      "description": "first line in bluetoothelp.html"
+   },
+   "bluetoothhelp_line2_prefix": {
+      "message": "Your browser may be ",
+      "description": "first part of second line in bluetoothelp.html"
+   },
+   "bluetoothhelp_line2_suffix": {
+      "message": "",
+      "description": "second part of second line in bluetoothelp.html"
+   },
+   "bluetoothhelp_line3": {
+      "message": "If the browser supports Bluetooth, you will see a Bluetooth pairing menu",
+      "description": "first line in bluetoothelp.html"
+   },
+   "browser_name_prefix":{
+      "message": "",
+      "description": "Prefix of browser name"
+   },
+   "browser_name_suffix": {
+      "message": " Browser",
+      "description": "suffix of browser name"
    }
 }
