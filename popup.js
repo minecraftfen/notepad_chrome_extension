@@ -1,6 +1,6 @@
-
+var background = chrome.extension.getBackgroundPage()
 function canvastoggle(e = null,state = null,extended = false){
-  obj=document.getElementById("canvas")
+  var obj = document.getElementById("canvas")
   if(state == null)
     if(obj.classList.contains("active")) 
       obj.classList.remove("active"); 
@@ -34,7 +34,7 @@ if (document.children[0].clientWidth > 600){
 }else{
   // Popup mode
   document.getElementsByClassName("windowed")[0].onclick = function () {
-    chrome.extension.getBackgroundPage().createtab("./popup.html")
+    background.createtab("./popup.html")
   }
   // Animation in first open
   if (localStorage.opened === "false") {

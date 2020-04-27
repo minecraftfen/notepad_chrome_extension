@@ -1,3 +1,5 @@
-function createtab(url) {
-  chrome.tabs.create({url: url});
+window.createtab = function(url){
+    chrome.tabs.create({
+        url: url
+    });
 };

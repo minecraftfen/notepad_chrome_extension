@@ -27,6 +27,10 @@
       "message": "只有Chrome和Opera提供蓝牙支持",
       "description": "bluetoothelp.html 第一行信息"
    },
+   "bluetoothhelp_line1_state2": {
+      "message": "配对成功,正在自动连接",
+      "description": "bluetoothelp.html 第三行信息"
+   },
    "bluetoothhelp_line2_prefix":{
       "message": "你的浏览器可能是 ",
       "description": "bluetoothelp.html 第二行信息前半部分"
@@ -35,8 +39,32 @@
       "message": "",
       "description": "bluetoothelp.html 第二行信息后半部分"
    },
-   "bluetoothhelp_line3": {
-      "message": "如果浏览器支持蓝牙,你将会看到一个蓝牙配对菜单",
+   "bluetoothhelp_line2_state2": {
+      "message": "笔记本指示灯绿灯快闪时请按翻页键确认",
+      "description": "bluetoothelp.html 第三行信息"
+   },
+   "bluetoothhelp_line2_finished": {
+      "message": "连接已完成",
+      "description": "bluetoothelp.html 第三行信息"
+   },
+   "bluetoothhelp_line2_help": {
+      "message": "嘿,别着急动笔!",
+      "description": "bluetoothelp.html 第三行信息"
+   },
+   "bluetoothhelp_line3_state1": {
+      "message": "如果浏览器支持蓝牙,单击界面即可进入配对",
+      "description": "bluetoothelp.html 第三行信息"
+   },
+   "bluetoothhelp_line3_state2": {
+      "message": "如果浏览器支持蓝牙,你将看到一个配对界面",
+      "description": "bluetoothelp.html 第三行信息"
+   },
+   "bluetoothhelp_line3_state3": {
+      "message": "确认完毕后请再次单击界面以确认",
+      "description": "bluetoothelp.html 第三行信息"
+   },
+   "bluetoothhelp_line3_help": {
+      "message": "检查一下你有没有打开编辑器!",
       "description": "bluetoothelp.html 第三行信息"
    },
    "browser_name_prefix": {

@@ -1,0 +1,168 @@
+:root {
+  --pos: 2.25;
+}
+
+#canvas {
+  --fill: var(--Theme_color);
+  --rx: 0.61rad;
+  --ry: 45deg;
+  --rz: 0;
+  --tz: -50px;
+  --w: 3;
+  z-index: 4;
+  --prew: 98px;
+  --preh: 148px;
+  --adjustx: -1px;
+  --adjusty: 35px;
+  --scale: 1.1;
+  --fill_aft: #FBFBFB;
+  transition:
+    width 0.25s cubic-bezier(0.5, -2, 0.5, 3),
+    height 0.25s cubic-bezier(0.5, -2, 0.5, 3),
+    border-radius 0.25s ease;
+}
+
+#canvas:hover {
+  width: calc(100px + var(--w) * 105px);
+  height: calc(100px + var(--w) * 105px);
+}
+
+#cubez {
+  --fill: #F5F5F5;
+  --rx: 0.61rad;
+  --ry: -45deg;
+  --rz: 0;
+  --tz: -50px;
+  --w: 3.5;
+  z-index: 2;
+  --prew: 25px;
+  --preh: 150px;
+  --adjustx: -11px;
+  --adjusty: 19px;
+  --scale: 1;
+  --fill_aft: #d9d9d9
+}
+
+#cubey {
+  --fill: #F5F5F5;
+  --rx: 0.95rad;
+  --ry: 0;
+  --rz: 45deg;
+  --tz: 50px;
+  --w: 4;
+  z-index: 1;
+  --prew: 100px;
+  --preh: 25px;
+  --adjustx: 0px;
+  --adjusty: 0px;
+  --scale: 1;
+  --fill_aft: #d9d9d9;
+  opacity: 0.5
+}
+
+.block {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  background-color: var(--fill_aft);
+  width: calc(100px + var(--w) * 100px);
+  height: calc(100px + var(--w)*100px);
+  transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(0) translate(-50%, -50%);
+  border-radius: 250px;
+}
+
+@keyframes rotate3D {
+  0% {
+    top: calc(50vh + var(--adjustx));
+    left: calc(50vw + var(--adjusty));
+    background-color: var(--fill);
+    width: var(--prew);
+    height: var(--preh);
+    transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translateZ(var(--tz)) translate(-50%, -50%);
+    border-radius: 0;
+  }
+
+  50%,
+  100% {
+    top: 50vh;
+    left: 50vw;
+    transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(0) translate(-50%, -50%);
+    border-radius: 250px;
+    width: calc(100px + var(--w) * 100px);
+    height: calc(100px + var(--w) * 100px);
+  }
+
+  80% {
+    background-color: var(--fill);
+    width: calc((100px + var(--w) * 100px) * var(--scale));
+    height: calc((100px + var(--w) * 100px) * var(--scale));
+  }
+
+  85% {
+    background-color: var(--fill);
+    width: calc((100px + var(--w) * 100px));
+    height: calc((100px + var(--w) * 100px));
+  }
+
+  100% {
+    background-color: var(--fill_aft)
+  }
+}
+
+body {
+  width: 540px;
+  height: 540px;
+  background-color: var(--Theme_color);
+}
+
+@keyframes bg {
+  0% {
+    background-color: #1E1E1E
+  }
+
+  100% {
+    background-color: var(--Theme_color)
+  }
+}
+
+body.move {
+  animation: bg 0.15s 1.85s both
+}
+
+.block.move {
+  animation: rotate3D 1.5s 0.5s both
+}
+
+.windowed {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  overflow: visible;
+}
+
+.windowed polygon {
+  background-color: var(--Theme_color);
+  transition: transform cubic-bezier(0.5, -1.5, 0.5, 2.5) 0.25s;
+}
+
+.windowed:hover polygon {
+  transform: translate(100px, -100px);
+}
+
+#canvas.active {
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+  animation: none;
+}
+
+#canvas.active.extended {
+  height: 98vh;
+  width: calc(98vh / 210 * 148);
+  transition:
+    width 0.5s cubic-bezier(0.5, 0, 0.5, 1.5),
+    height 0.5s cubic-bezier(0.5, 0, 0.5, 1.5),
+    border-radius 0.5s ease;
+}
