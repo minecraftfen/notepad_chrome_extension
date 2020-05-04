@@ -1,7 +1,6 @@
 :root {
   --pos: 2.25;
 }
-
 #canvas {
   --fill: var(--Theme_color);
   --rx: 0.61rad;

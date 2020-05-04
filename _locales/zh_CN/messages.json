@@ -31,6 +31,10 @@
       "message": "配对成功,正在自动连接",
       "description": "bluetoothelp.html 第三行信息"
    },
+   "bluetoothhelp_line1_help": {
+      "message": "嘿,别着急动笔!",
+      "description": "bluetoothelp.html 第三行信息"
+   },
    "bluetoothhelp_line2_prefix":{
       "message": "你的浏览器可能是 ",
       "description": "bluetoothelp.html 第二行信息前半部分"
@@ -48,7 +52,7 @@
       "description": "bluetoothelp.html 第三行信息"
    },
    "bluetoothhelp_line2_help": {
-      "message": "嘿,别着急动笔!",
+      "message": "检查一下你有没有打开编辑器!",
       "description": "bluetoothelp.html 第三行信息"
    },
    "bluetoothhelp_line3_state1": {
@@ -57,14 +61,6 @@
    },
    "bluetoothhelp_line3_state2": {
       "message": "如果浏览器支持蓝牙,你将看到一个配对界面",
-      "description": "bluetoothelp.html 第三行信息"
-   },
-   "bluetoothhelp_line3_state3": {
-      "message": "确认完毕后请再次单击界面以确认",
-      "description": "bluetoothelp.html 第三行信息"
-   },
-   "bluetoothhelp_line3_help": {
-      "message": "检查一下你有没有打开编辑器!",
       "description": "bluetoothelp.html 第三行信息"
    },
    "browser_name_prefix": {

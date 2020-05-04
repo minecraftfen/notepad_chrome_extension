@@ -17,18 +17,10 @@ function canvastoggle(e = null,state = null,extended = false){
 // Title i18n
 document.getElementsByTagName("title")[0].textContent = chrome.i18n.getMessage("Title_popup")
 // Mode detect
-if (document.children[0].clientWidth > 600){
+obj = document.children[0]
+if (Math.max(obj.offsetWidth / obj.offsetHeight, obj.offsetHeight / obj.offsetWidth) > 1.25){
   // Windowed mode
-  // Animation in first open
-  if (localStorage.windowopened == "false") {
-    localStorage.windowopened = "true";
-    var array = document.getElementsByClassName("block");
-    for (let i = 0; i <= 2; i++) array[i].classList.add("move");
-    document.getElementsByTagName("body")[0].classList.add("move");
-    setTimeout(canvastoggle, 3000, true, true, true);
-  } else {
-    canvastoggle(true,true,true)
-  }
+  canvastoggle(true,true,true)
   document.getElementsByClassName("windowed")[0].style.display = "none";
   // setTimeout(function(){alert(chrome.i18n.getMessage("Alert_popup_windowd"))},1)
 }else{
@@ -37,7 +29,7 @@ if (document.children[0].clientWidth > 600){
     background.createtab("./popup.html")
   }
   // Animation in first open
-  if (localStorage.opened === "false") {
+  if (!eval(localStorage.opened)) {
     localStorage.opened = "true";
     var array = document.getElementsByClassName("block");
     for (let i = 0; i <= 2; i++) array[i].classList.add("move");
